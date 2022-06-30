@@ -15,7 +15,6 @@ EXPOSE $VNC_PORT $NO_VNC_PORT
 
 ### Envrionment config
 ENV HOME=/home/user \
-    USER=user \
     TERM=xterm \
     STARTUPDIR=/dockerstartup \
     INST_SCRIPTS=/headless/install \
@@ -47,18 +46,14 @@ ADD src/install/install_custom_fonts.sh .
 RUN ./install_custom_fonts.sh
 
 ### Install vnc-server and novnc
-ADD src/install/tightvnc.sh .
-RUN ./tightvnc.sh
+ADD src/install/tigervnc.sh .
+RUN ./tigervnc.sh
 ADD src/install/novnc.sh .
 RUN ./novnc.sh
 
 ### Install xfce UI
 ADD src/install/xfce_ui.sh .
 RUN $INST_SCRIPTS/xfce_ui.sh
-
-### Install user stuff
-RUN apt install -y libreoffice
-RUN apt install -y jq xclip claws-mail xvkbd
 
 ### Install firefox and chrome browser
 ADD src/install/firefox.sh .

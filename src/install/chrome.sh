@@ -19,7 +19,7 @@ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 112695A0E562B32A
 ## apt pinning
 cat <<EOF > /etc/apt/preferences.d/chromium.pref
 Package: *
-Pin: release a=eoan
+Pin: release a=focal
 Pin-Priority: 500
 
 Package: *

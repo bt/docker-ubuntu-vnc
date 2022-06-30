@@ -37,3 +37,6 @@ echo Welcome to Headless Docker!
 echo Use \"sudo apt install xxx\" to install packages from the Ubuntu universe.
 echo
 EOF
+
+# change ownership
+chown -R user:user "$HOME"
