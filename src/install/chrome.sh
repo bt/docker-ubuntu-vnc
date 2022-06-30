@@ -34,7 +34,7 @@ Pin-Priority: 700
 EOF
 
 # check if x86_64
-if [[ $(uname -m) == "x86_64xx" ]]; then
+if [[ $(uname -m) == "x86_64" ]]; then
 	echo "Install Chrome Browser"
 	apt-get update && apt-get install -y \
 		apt-transport-https \
