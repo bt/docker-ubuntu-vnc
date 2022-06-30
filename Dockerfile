@@ -46,8 +46,8 @@ ADD src/install/install_custom_fonts.sh .
 RUN ./install_custom_fonts.sh
 
 ### Install vnc-server and novnc
-ADD src/install/tigervnc.sh .
-RUN ./tigervnc.sh
+ADD src/install/tightvnc.sh .
+RUN ./tightvnc.sh
 ADD src/install/novnc.sh .
 RUN ./novnc.sh
 
