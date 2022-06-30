@@ -18,4 +18,9 @@ if [ -f /etc/X11/xinit/xinitrc ]; then
 fi
 [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
 
+# disable screensaver and power management
+xset -dpms &
+xset s noblank &
+xset s off &
+
 exec startxfce4 &
