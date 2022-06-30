@@ -1,0 +1,27 @@
+[Desktop Entry]
+Version=1.0
+Name=Chromium Browser
+GenericName=Web Browser
+Comment=Access the Internet
+Exec=chromium --start-maximized --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT' %U
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=chromium
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;x-scheme-handler/http;x-scheme-handler/https;
+StartupWMClass=chromium
+StartupNotify=true
+Actions=NewWindow;Incognito;TempProfile;
+X-AppInstall-Package=chromium
+
+[Desktop Action NewWindow]
+Name=Open a New Window
+Exec=chromium --test-type
+
+[Desktop Action Incognito]
+Name=Open a New Window in incognito mode
+Exec=chromium --incognito --test-type
+
+[Desktop Action TempProfile]
+Exec=chromium --start-maximized --simulate-outdated-no-au='Tue, 31 Dec 2099 23:59:59 GMT'
