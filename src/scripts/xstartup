@@ -19,8 +19,7 @@ fi
 [ -r $HOME/.Xresources ] && xrdb $HOME/.Xresources
 
 # disable screensaver and power management
-xset -dpms &
-xset s noblank &
-xset s off &
+xset s noblank
+xset s off
 
-exec startxfce4 &
+exec startxfce4

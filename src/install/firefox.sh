@@ -3,6 +3,11 @@ set -e
 
 echo "Install Firefox"
 
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A6DCF7707EBC211F
-apt-add-repository "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu focal main"
+add-apt-repository ppa:mozillateam/ppa
+cat <<EOF > /etc/apt/preferences.d/firefox.pref
+Package: *
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001
+EOF
+
 apt-get install firefox -y

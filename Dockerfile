@@ -1,5 +1,5 @@
 # This Dockerfile is used to build an headless vnc image based on Ubuntu
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 ## Connection ports for controlling the UI:
 # VNC port:5901 HTTP port:6901
