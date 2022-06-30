@@ -9,6 +9,6 @@ else
     URL="https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/ubuntu-20.04LTS/amd64/tigervncserver_1.12.0-1ubuntu1_amd64.deb/download"
 fi
 
-wget $URL -o tigervnc_server.deb
+wget -O tigervnc_server.deb $URL
 dpkg -i tigervnc_server.deb
 rm tigervnc_server.deb
