@@ -100,6 +100,10 @@ else
 fi
 echo -e "start window manager\n..."
 
+echo "disable screensaver\n..."
+rm -rf /etc/xdg/autostart/xscreensaver.desktop
+rm -rf /etc/xdg/autostart/xfce4-screensaver.desktop
+
 ## log connect options
 echo -e "\n\n--- VNC environment started ---"
 echo -e "\nVNCSERVER started on DISPLAY= $DISPLAY \n\t=> connect via VNC viewer with $VNC_IP:$VNC_PORT"
